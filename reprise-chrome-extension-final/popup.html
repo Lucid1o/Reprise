@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reprise</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark"><span></span></span>
+        <span>Reprise</span>
+      </div>
+      <span class="local-label">LOCAL ONLY</span>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">YOUR WORKFLOW, READY WHEN YOU ARE</div>
+      <h1>Pick up where<br>you left off.</h1>
+      <p>Save your complete browser workspace—windows, tabs, and the context behind them.</p>
+    </section>
+
+    <section class="editor-card">
+      <div class="section-heading">
+        <span>Save a session</span>
+        <span class="counter" id="tabCounter">0 tabs · 0 windows</span>
+      </div>
+
+      <label for="sessionName">Session name <span>Optional</span></label>
+      <input id="sessionName" type="text" placeholder="e.g. Firewall research" maxlength="80">
+
+      <label for="sessionContext">Context <span>Optional</span></label>
+      <textarea id="sessionContext" placeholder="What were you working on?" maxlength="500"></textarea>
+
+      <label for="nextStep">Next step <span>Optional</span></label>
+      <textarea id="nextStep" placeholder="What should you do when you return?" maxlength="300"></textarea>
+
+      <div class="actions">
+        <button class="primary" id="saveButton">Save session</button>
+        <button class="secondary" id="restoreLatestButton">Restore</button>
+      </div>
+      <button class="outline full" id="toggleSessionsButton">View saved sessions <span>⌄</span></button>
+    </section>
+
+    <section class="saved-section hidden" id="savedSection">
+      <div class="section-heading">
+        <span>Saved sessions</span>
+        <button class="text-button" id="clearButton">Clear all</button>
+      </div>
+      <div id="sessionList" class="session-list"></div>
+    </section>
+
+    <section class="feature-grid">
+      <div class="feature">
+        <div class="feature-icon">▣</div>
+        <strong>Complete workspace</strong>
+        <span>all windows & tabs</span>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">✦</div>
+        <strong>Smart summaries</strong>
+        <span>generated locally</span>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⌑</div>
+        <strong>Private by design</strong>
+        <span>private storage</span>
+      </div>
+    </section>
+
+    <footer><strong>Reprise</strong> · Your workflow, ready when you are.<br>Your data stays in browser storage. No account. No server.</footer>
+    <div class="toast" id="toast"></div>
+  </main>
+  <script src="summarizer.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

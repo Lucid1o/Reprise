@@ -1,0 +1,25 @@
+REPRISE — CHROME WEB STORE LISTING
+
+Short description:
+Save, organize, and restore your complete browser workspace. Your workflow, ready when you are.
+
+Detailed description:
+Reprise helps you return to your work without rebuilding your browser from scratch.
+
+Save your complete browser workspace, including tabs across multiple windows. Add a name, context, and next step so every saved session has a clear purpose when you return.
+
+Features:
+• Save tabs across all open windows
+• Preserve window grouping when restoring
+• Add context and next steps
+• Generate summaries locally
+• Restore or delete saved sessions
+• No account or server
+• No AI or API key required
+• Your data stays in browser storage
+
+Privacy:
+Reprise stores session data locally in Chrome storage. It does not require an account, transmit browsing data to a server, or use external analytics.
+
+Tagline:
+Your workflow, ready when you are.
