@@ -68,11 +68,6 @@ reprise/
 ├── summarizer.js
 ├── assets/
 │   └── reprise-preview.png
-└── icons/
-    ├── icon16.png
-    ├── icon32.png
-    ├── icon48.png
-    └── icon128.png
 ```
 
 ## <span style="color:#B8F34A;">Privacy</span>
