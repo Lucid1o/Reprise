@@ -2,33 +2,94 @@
 
 **Your workflow, ready when you are.**
 
-Reprise is a local-first Chrome extension for saving, organizing, and restoring complete browser workspaces.
+Reprise is a local-first Chrome extension that helps you save and restore browser sessions, including tabs across multiple windows.
+
+![Reprise preview](assets/reprise-preview.png)
+
+## Why Reprise?
+
+When working on a project, research task, or assignment, it is easy to lose track of the tabs and windows you had open.
+
+Reprise lets you save that workspace and return to it later without opening everything again.
 
 ## Features
 
-- Save tabs from every open browser window
-- Preserve window grouping
+- Save tabs from all open browser windows
+- Restore saved windows and tabs
 - Add a session name, context, and next step
-- Generate summaries locally without AI
-- Restore saved sessions into separate windows
-- Delete individual sessions or clear all saved sessions
-- No account, backend, API key, analytics, or external server
-- Manifest V3
-- Includes branded extension icons in 16, 32, 48, and 128 pixel sizes
+- Generate simple summaries locally
+- View and delete saved sessions
+- No account or backend required
+- No AI API or external service
+- Data stays in Chrome's local storage
 
-## Install for development
+## How to use
 
-1. Extract this folder.
-2. Open `chrome://extensions`.
-3. Enable Developer mode.
-4. Select **Load unpacked**.
-5. Choose the folder containing `manifest.json`.
+1. Open the tabs and windows you want to save.
+2. Click the Reprise extension icon.
+3. Add a session name, context, or next step if needed.
+4. Click **Save session**.
+5. Open **View saved sessions** whenever you want to return.
+6. Click **Restore** to reopen the workspace.
 
-## Chrome Web Store submission
+## Installation
 
-Before submitting, review the extension name, description, screenshots, privacy practices, and permissions in the Chrome Web Store Developer Dashboard. The extension uses `tabs`, `windows`, and `storage` only to capture, restore, and save browser sessions locally.
+1. Download or clone this repository.
+2. Open Chrome and go to:
 
-## Brand
+   ```text
+   chrome://extensions
+   ```
 
-Reprise  
-Your workflow, ready when you are.
+3. Enable **Developer mode**.
+4. Click **Load unpacked**.
+5. Select the folder containing `manifest.json`.
+
+## Project structure
+
+```text
+reprise/
+├── manifest.json
+├── popup.html
+├── popup.css
+├── popup.js
+├── summarizer.js
+├── assets/
+│   └── reprise-preview.png
+└── icons/
+    ├── icon16.png
+    ├── icon32.png
+    ├── icon48.png
+    └── icon128.png
+```
+
+## Privacy
+
+Reprise is designed to work locally.
+
+It uses:
+
+- `tabs` to read tab information
+- `windows` to save and restore window groups
+- `storage` to save sessions locally
+
+The current version does not send browsing data to a server or require an account.
+
+## Limitations
+
+- Chrome internal pages such as `chrome://` pages cannot be saved normally.
+- Sessions are stored separately for each Chrome profile.
+- The local summary is based on tab titles and domains.
+- Reprise does not save passwords, cookies, or page contents.
+
+## Tech stack
+
+- HTML
+- CSS
+- JavaScript
+- Chrome Extensions Manifest V3
+- Chrome Storage API
+
+## License
+
+MIT License.
